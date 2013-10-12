@@ -1,0 +1,8 @@
+Do this to see all messages in dmesg output
+dmesg -n 8
+
+For some reason this result will not work with modprobe. I suspect
+it is because the module is not copied to /lib/<kernel>/modules dir.
+It will work with insmod and rmmod though.  I've added the commands
+to Makefile under localtest target.
+
